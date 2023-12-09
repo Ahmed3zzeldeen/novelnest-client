@@ -1,6 +1,22 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
-import Title from './Title';
+
+
+function Title(props) {
+  return (
+    <Typography component="h2" top="40" variant="h6" color="primary" gutterBottom>
+      {props.children}
+    </Typography>
+  );
+}
+
+Title.propTypes = {
+  children: PropTypes.node,
+};
+
 
 // Generate Sales Data
 function createData(time, amount) {

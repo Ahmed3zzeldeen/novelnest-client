@@ -1,6 +1,21 @@
+import React from 'react';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import Title from './Title';
+import PropTypes from 'prop-types';
+
+function Title(props) {
+  return (
+    <Typography component="h2" top="40" variant="h6" color="primary" gutterBottom>
+      {props.children}
+    </Typography>
+  );
+}
+
+Title.propTypes = {
+  children: PropTypes.node,
+};
+
+
 
 function preventDefault(event) {
   event.preventDefault();
