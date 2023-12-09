@@ -5,7 +5,8 @@ import PeopleIcon from '@mui/icons-material/People';
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
-import * as Routers from '../../Constants/routes';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import * as Routers from '../../../Constants/routes';
 
 export const mainListItems = (
   <>
@@ -17,6 +18,14 @@ export const mainListItems = (
       <ListItemText primary="Dashboard" />
     </ListItemButton>
     
+    <ListItemButton href={Routers.DASHBOARD_ADDBOOK}>
+      <ListItemIcon>
+        <AddBoxIcon/>
+      </ListItemIcon>
+      <ListItemText primary="Add New Book" />
+    </ListItemButton>
+    
+
     <ListItemButton  href={Routers.DASHBOARD_BOOKS}>    
       <ListItemIcon>
         <AutoStoriesOutlinedIcon/>
